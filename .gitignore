@@ -13,3 +13,6 @@ secret
 
 # ignore tmp
 **tmp
+
+# Ignore versions
+*/alembic/versions

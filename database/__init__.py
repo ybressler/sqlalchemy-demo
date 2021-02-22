@@ -1,5 +1,5 @@
 # We'll be using this session throughout our application / code
-from .connect import session
+from .connect import DB_URI, session
 # This metadata allows us to bind python objects to preexisting objects in the db
 from .metadata import metadata
 

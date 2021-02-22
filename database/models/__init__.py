@@ -1,5 +1,5 @@
-from base import Base
-from base_table import BaseTable
+from .base import Base
+from .base_table import BaseTable
 
 # Now import your actual models
 from .person import *

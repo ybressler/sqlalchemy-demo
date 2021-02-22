@@ -38,12 +38,12 @@ def create_db_ERD():
     graph.write_png(save_path)
 
     #  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
-
+    print(f'Created an ERD for your curr db here: "{save_path}"')
 
 
 if __name__ == '__main__':
 
-    get_db_ERD()
+    create_db_ERD()
 
 
 
