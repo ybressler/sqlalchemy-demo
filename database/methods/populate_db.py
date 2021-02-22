@@ -217,7 +217,9 @@ def add_all_people(records=person_records):
                 person_id=my_person.id,
                 role_id=my_role.id,
                 show_id=my_show.id
-            )
+            )\
+            .first()
+            
         if work_experience:
             print(f'Already have that work experience: person_id={my_person.id}; role_id={my_role.id}; show_id={my_show.id}')
         else:
@@ -226,23 +228,14 @@ def add_all_people(records=person_records):
                 role_id=my_role.id,
                 show_id=my_show.id
             )
+            print(work_experience)
             session.add(work_experience)
             session.commit()
 
     # All done!
 
-
-def DELETE_EVERYTHING():
-    """If you want to wipe your db clean"""
-
-    for cls in [ShowsRolesLink, Show, Theatre, Person, Role]:
-        session.query(cls).delete()
-
-    # Commit at the end of the loop
-    session.commit()
-
-
-
+#
+#
 if __name__ == '__main__':
 
     # Add em all!
