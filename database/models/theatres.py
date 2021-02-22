@@ -28,8 +28,6 @@ class Theatre(Base, BaseTable):
     date_demolished = Column(DateTime, nullable=True)
 
 
-
-
     #  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
     # INTERNALLY MANAGED
 

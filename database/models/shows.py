@@ -1,22 +1,11 @@
-# import os
-# import sys
-#
-# # This makes the file executable
-# if os.environ.get('PROJECT_PATH'):
-#     sys.path.append(os.environ.get('PROJECT_PATH'))
-
-
 import datetime
 
 # sqlalchemy stuff
 from sqlalchemy import Column, Integer, String, DateTime, Boolean, ForeignKey
-
 from sqlalchemy.sql import expression
-from sqlalchemy.orm import validates, relationship, backref
+from sqlalchemy.orm import relationship, backref
 from sqlalchemy.ext.associationproxy import association_proxy
 
-# mysql specific columns
-from sqlalchemy.dialects.mysql import TINYINT, YEAR
 
 # Import your base tables
 from database.models import Base, BaseTable
@@ -47,6 +36,8 @@ class Show(Base, BaseTable):
     #  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
     # RELATIONSHIPS
     theatre_id = Column(Integer, ForeignKey('theatre.id'), nullable=True, index=True, comment='Which theatre did this show perform in?')
+
+    # Creating a relationship is *this* easy
     theatre = relationship('Theatre', backref='show')
     theatre_name = association_proxy('theatre', 'theatre_name')
 
