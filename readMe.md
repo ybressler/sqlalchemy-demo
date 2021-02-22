@@ -91,4 +91,13 @@ python3 database/methods/generate_erd.py
 
 ----
 ## Adding data to your new db
-We'll add a few records with the following module
+We'll add a few records with the following module: [populate_db.py](database/methods/populate_db.py)
+
+## Do a cool query
+_Querying your database can be done through a python interface. Pretty neat! Check out some of
+the querying behavior in the following module:_
+[some_query.py](database/methods/some_query.py)
+
+----
+## Generate an ERD
+Create a cool picture representation of your db: [generate_erd.py](database/methods/generate_erd.py)
