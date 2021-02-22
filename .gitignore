@@ -1,0 +1,15 @@
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.py[cod]
+*.pyc
+.DS_Store
+
+
+# Ignore your virtual environment
+venv
+
+# Always ignore secrets
+secret
+
+# ignore tmp
+**tmp

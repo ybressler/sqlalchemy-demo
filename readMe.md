@@ -5,3 +5,11 @@ The following repo is a demo for how to create a manage a database using sqlalch
 You'll need a database configured to your local machine. I'd suggest using MySQL or Postgres.
 Both are free and are easy to manage. For the purpose of this demo, it does not matter
 which database you choose to use.
+
+## Getting started
+_The following is written for unix machines..._
+Create a virtual environment and activate it. Then, install the requirements:
+```
+python3 -m venv venv
+source venv/bin/activate
+```
