@@ -88,3 +88,7 @@ alembic upgrade head
 ```
 python3 database/methods/generate_erd.py
 ```
+
+----
+## Adding data to your new db
+We'll add a few records with the following module
