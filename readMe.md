@@ -24,5 +24,22 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-
 _You're now ready to begin!_
+
+4. Store your DB_URI as an environment variables _or_ update the value in the code.
+<br>_For example, following default values:_
+```
+export DB_URI='postgresql://postgres:@localhost:5432/postgres'
+```
+For more info as to what's going on here, give this a read: FOO
+
+
+5. Export the full path of your current project the environment variable `PROJECT_PATH`:
+```
+export PROJECT_PATH=$(pwd)
+```
+_This will allow you to execute nested files as executables, without dealing with
+issues like relative imports. In a production setting, your modules will likely be
+imported properly and executed from a central orchestrator (such as a web app)._
+
+6. Do this
